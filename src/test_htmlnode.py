@@ -31,7 +31,8 @@ class TestHtmlNode(unittest.TestCase):
         html_four = HTMLNode()
         self.assertEqual(html_four.props_to_html(), '')
 
-    
+if __name__ == "__main__":
+    unittest.main()
     
     
 

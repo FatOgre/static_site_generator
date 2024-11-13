@@ -29,5 +29,13 @@ class TestTextNode(unittest.TestCase):
         node2 = TextNode("This is test node 2", TextType.ITALIC)
         self.assertNotEqual(node, node2)
 
+    def test_text_to_html(self):
+        node = TextNode("This is test node", TextType.ITALIC)
+        self.assertEqual(node.text_node_to_html_node().to_html(), '<i>This is test node</i>')
+
+    def test_text_to_html_two(self):
+        node = TextNode("This is test node", TextType.BOLD)
+        self.assertEqual(node.text_node_to_html_node().to_html(), '<b>This is test node</b>')
+
 if __name__ == "__main__":
     unittest.main()
